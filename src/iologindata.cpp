@@ -661,8 +661,8 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 		++runningId;
 
 		if (Container* container = item->getContainer()) {
-			auto it = openContainers.find(container);
-			if (it == openContainers.end()) {
+			auto cit = openContainers.find(container);
+			if (cit == openContainers.end()) {
 				container->resetAutoOpen();
 			} else {
 				container->setAutoOpen(it->second);
